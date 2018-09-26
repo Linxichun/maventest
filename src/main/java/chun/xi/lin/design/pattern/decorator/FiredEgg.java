@@ -1,0 +1,23 @@
+package chun.xi.lin.design.pattern.decorator;
+
+/**
+ * Created by Lin.XiChun on 2018/5/31.
+ */
+public class FiredEgg extends Condiment {
+    private Pancake pancake;
+
+    public FiredEgg(Pancake pancake) {
+        this.pancake = pancake;
+    }
+
+    @Override
+    public String getDesc() {
+        return pancake.getDesc() + ", 煎蛋";
+    }
+
+    @Override
+    public double price() {
+        return pancake.price() + 2;
+    }
+
+}
